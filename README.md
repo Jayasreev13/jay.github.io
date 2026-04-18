@@ -1,2 +1,2 @@
-# jay.github.io
+# Jay Portfolio
 Jayasree's personal portolio
