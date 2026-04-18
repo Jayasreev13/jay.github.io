@@ -264,7 +264,42 @@ h1.name .gold{
   transform: scale(1.05);
 }
   
-  
+/* ── ACHIEVEMENTS GALLERY ── */
+.achievements-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.5rem}
+.achievement-card{
+  background:var(--card);border:1px solid var(--border);border-radius:12px;
+  overflow:hidden;display:flex;flex-direction:column;
+  transition:border-color .2s,transform .2s,box-shadow .2s;
+}
+.achievement-card:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 12px 30px rgba(201,168,76,.15)}
+.achievement-image{
+  height:160px;display:flex;align-items:center;justify-content:center;
+  border-bottom:1px solid var(--border);
+}
+.achievement-icon{font-size:3.5rem;opacity:.9}
+.achievement-content{padding:1.8rem;display:flex;flex-direction:column;gap:.8rem;flex:1}
+.achievement-badge{
+  display:inline-flex;align-self:flex-start;
+  font-size:.65rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:.3rem .8rem;border-radius:6px;border:1px solid;
+}
+.achievement-title{font-family:var(--head);font-size:1.05rem;font-weight:700;line-height:1.35}
+.achievement-desc{font-size:.88rem;color:var(--muted);line-height:1.72;flex:1}
+.achievement-link{
+  display:inline-flex;align-items:center;gap:.4rem;
+  font-size:.8rem;font-weight:600;color:var(--gold2);text-decoration:none;
+  transition:color .2s,transform .2s;margin-top:.5rem;
+}
+.achievement-link:hover{color:var(--gold);transform:translateX(3px)}
+
+@media(max-width:960px){
+  .achievements-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.2rem}
+}
+@media(max-width:600px){
+  .achievements-grid{grid-template-columns:1fr}
+  .achievement-image{height:140px}
+  .achievement-icon{font-size:2.8rem}
+}  
 /* ── SECTION BASE ── */
 .section{padding:5.5rem 5%;max-width:1200px;margin:0 auto}
 .full{padding:5.5rem 5%}
@@ -643,7 +678,102 @@ footer{
   </div>
 </div>
 </div>
+  
+<!-- ═══════════════ ACHIEVEMENTS GALLERY ═══════════════ -->
+<div class="alt">
+<div class="section" id="achievements">
+  <div class="s-header reveal">
+    <div class="s-eyebrow" style="color:var(--rose)">
+      <span class="line" style="background:var(--rose)"></span>Achievements & Recognition
+    </div>
+    <h2 class="s-title">Milestones & Highlights</h2>
+    <p class="s-desc">Recognition for innovation, leadership, and contributions to AI and women in technology. Featured as a speaker at international AI summits and recipient of prestigious awards.</p>
+  </div>
 
+  <div class="achievements-grid">
+    
+    <!-- Achievement 1: IIW She Inspires Awards 2025 -->
+    <div class="achievement-card reveal">
+      <div class="achievement-image" style="background:linear-gradient(135deg,rgba(255,107,138,.2),rgba(167,139,250,.2))">
+        <div class="achievement-icon">🏆</div>
+      </div>
+      <div class="achievement-content">
+        <div class="achievement-badge" style="background:rgba(255,107,138,.1);border-color:rgba(255,107,138,.3);color:var(--rose)">Recognition</div>
+        <h3 class="achievement-title">IIW She Inspires Awards 2025</h3>
+        <p class="achievement-desc">Recognized for inspiring women in leadership and technology, celebrating achievements in women empowerment and career excellence.</p>
+        <a href="https://www.linkedin.com/posts/jayasree-varadarajan_iiw-iiwsheinspiresawards-womeninleadership-activity-7312869255278977024-WLRd" target="_blank" class="achievement-link">View Post →</a>
+      </div>
+    </div>
+
+    <!-- Achievement 2: AI Summit Singapore 2024 Speaker -->
+    <div class="achievement-card reveal">
+      <div class="achievement-image" style="background:linear-gradient(135deg,rgba(77,184,255,.2),rgba(61,217,179,.2))">
+        <div class="achievement-icon">🌏</div>
+      </div>
+      <div class="achievement-content">
+        <div class="achievement-badge" style="background:rgba(77,184,255,.1);border-color:rgba(77,184,255,.3);color:var(--sky)">Speaking</div>
+        <h3 class="achievement-title">AI Summit Singapore 2024 - Speaker</h3>
+        <p class="achievement-desc">Featured speaker at AI Summit Singapore discussing AI innovation, equity in AI, and the future of intelligent systems in Asia-Pacific.</p>
+        <a href="https://www.linkedin.com/posts/jayasree-varadarajan_aisummitsingapore-ai-equityinai-activity-7204456367359741954-rWsu" target="_blank" class="achievement-link">View Post →</a>
+      </div>
+    </div>
+
+    <!-- Achievement 3: ATx Singapore 2024 -->
+    <div class="achievement-card reveal">
+      <div class="achievement-image" style="background:linear-gradient(135deg,rgba(201,168,76,.2),rgba(232,201,107,.2))">
+        <div class="achievement-icon">🎯</div>
+      </div>
+      <div class="achievement-content">
+        <div class="achievement-badge" style="background:rgba(201,168,76,.1);border-color:rgba(201,168,76,.3);color:var(--gold2)">Event</div>
+        <h3 class="achievement-title">ATx Singapore 2024</h3>
+        <p class="achievement-desc">Represented at ATx Singapore Summit, engaging with global leaders in artificial intelligence and exploring cutting-edge AI applications.</p>
+        <a href="https://www.linkedin.com/posts/jayasree-varadarajan_theaisummit-atxsg-atxsg2024-activity-7204410391622254592-Ym_3" target="_blank" class="achievement-link">View Post →</a>
+      </div>
+    </div>
+
+    <!-- Achievement 4: IIW Awards 2024 - International Women's Day -->
+    <div class="achievement-card reveal">
+      <div class="achievement-image" style="background:linear-gradient(135deg,rgba(167,139,250,.2),rgba(255,107,138,.2))">
+        <div class="achievement-icon">👩‍💼</div>
+      </div>
+      <div class="achievement-content">
+        <div class="achievement-badge" style="background:rgba(167,139,250,.1);border-color:rgba(167,139,250,.3);color:var(--lavender)">Women in Leadership</div>
+        <h3 class="achievement-title">IIW Awards 2024 - Women in Tech</h3>
+        <p class="achievement-desc">Recognized on International Women's Day for inspiring women in STEM and advancing gender diversity in AI and technology sectors.</p>
+        <a href="https://www.linkedin.com/posts/jayasree-varadarajan_iiwawards2024-internationalwomensday-inspiringwomen-activity-7180971785792757763-1Snd" target="_blank" class="achievement-link">View Post →</a>
+      </div>
+    </div>
+
+    <!-- Achievement 5: UK Global Talent Visa - AI Specialist -->
+    <div class="achievement-card reveal">
+      <div class="achievement-image" style="background:linear-gradient(135deg,rgba(61,217,179,.2),rgba(77,184,255,.2))">
+        <div class="achievement-icon">🛂</div>
+      </div>
+      <div class="achievement-content">
+        <div class="achievement-badge" style="background:rgba(61,217,179,.1);border-color:rgba(61,217,179,.3);color:var(--mint)">Career Milestone</div>
+        <h3 class="achievement-title">UK Global Talent Visa - AI Specialist</h3>
+        <p class="achievement-desc">Awarded UK Global Talent Visa recognizing outstanding talent and expertise in Artificial Intelligence and contribution to the AI ecosystem.</p>
+        <a href="https://www.linkedin.com/posts/jayasree-varadarajan_globaltalentvisa-aiinnovation-careermilestone-activity-7154611322314248192-1KMb" target="_blank" class="achievement-link">View Post →</a>
+      </div>
+    </div>
+
+    <!-- Achievement 6: AI Summit London 2023 -->
+    <div class="achievement-card reveal">
+      <div class="achievement-image" style="background:linear-gradient(135deg,rgba(255,107,138,.2),rgba(201,168,76,.2))">
+        <div class="achievement-icon">🇬🇧</div>
+      </div>
+      <div class="achievement-content">
+        <div class="achievement-badge" style="background:rgba(255,107,138,.1);border-color:rgba(255,107,138,.3);color:var(--rose)">Speaking</div>
+        <h3 class="achievement-title">AI Summit London 2023 - Speaker</h3>
+        <p class="achievement-desc">Featured speaker at AI Summit London discussing AI innovation, business applications, and the strategic importance of AI in enterprise.</p>
+        <a href="https://www.linkedin.com/posts/jayasree-varadarajan_aisummit-aisummit-aibusiness-activity-7076995150446563328-KZC4" target="_blank" class="achievement-link">View Post →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+  
 <!-- ═══════════════ EXPERIENCE ═══════════════ -->
 <div class="section" id="experience">
   <div class="s-header reveal">
