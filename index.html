@@ -235,6 +235,28 @@ h1.name .gold{
 .qi-label{font-size:.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.1rem;font-weight:600}
 .qi-val{font-size:.88rem;font-weight:600;color:var(--text)}
 
+.profile-pic-container {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 2px solid rgba(201,168,76,.3);
+  background: var(--navy2);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp .6s .75s forwards;
+}
+
+.profile-pic {
+width: 100%;
+height: auto;
+display: block;
+transition: transform .3s ease;
+}
+
+.profile-pic-container:hover .profile-pic {
+  transform: scale(1.05);
+}
+  
+  
 /* ── SECTION BASE ── */
 .section{padding:5.5rem 5%;max-width:1200px;margin:0 auto}
 .full{padding:5.5rem 5%}
@@ -504,7 +526,22 @@ footer{
       <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=i8ATGaUAAAAJ" target="_blank">📄 Scholar</a>
     </div>
   </div>
+  
+  <div class="hero-right">
+    <!-- ADD THIS: Profile picture container -->
+    <div class="profile-pic-container">
+      <img src="images/profile.jpg" alt="Jayasree Varadarajan" class="profile-pic">
+    </div>
+  
+    <!-- Existing stat panel code below -->
+    <div class="stat-panel">
+      ...
+    </div>
+    ...
+  </div>
 
+
+  
   <div class="hero-right">
     <div class="stat-panel">
       <div class="stat-panel-title">Career at a Glance</div>
